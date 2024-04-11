@@ -21,7 +21,7 @@ def cattle_helper(cattle) -> dict:
 
 # CRUD Operations
 # Retrieve all cattle in database
-async def retrieve_cattle():
+async def retrieve_animals():
     cattle = []
     async for animal in cattle_collection.find():
         cattle.append(cattle_helper(animal))
