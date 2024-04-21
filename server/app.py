@@ -15,3 +15,7 @@ app.add_middleware(CORSMiddleware, allow_origins=origins, allow_credentials=True
 @app.get("/", tags=["Root"])
 async def read_root():
     return {"message": "Welcome to FastAPI!"}
+
+@app.get("/health")
+async def health_check():
+    return {"status": "ok"}
